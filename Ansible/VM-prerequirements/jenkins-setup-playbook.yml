@@ -1,0 +1,13 @@
+- hosts: all
+  become: yes
+  gather_facts: true
+  tasks:
+
+  - name: Pull jenkins Image
+    comunity.docker.docker._image:
+      name: jenkins/jenkins
+      source: pull
+      pull: 
+        platform: amd64
+
+  
